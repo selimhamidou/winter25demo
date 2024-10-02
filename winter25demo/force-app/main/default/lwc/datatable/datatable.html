@@ -1,0 +1,14 @@
+<template>
+  <lightning-card title="Résultats de la requête SOQL">
+    <template if:true={columns}>
+      <lightning-datatable
+        key-field="Id"
+        data={data}
+        columns={columns}
+      ></lightning-datatable>
+    </template>
+    <template if:true={error}>
+      <div class="slds-text-color_error">{error}</div>
+    </template>
+  </lightning-card>
+</template>
